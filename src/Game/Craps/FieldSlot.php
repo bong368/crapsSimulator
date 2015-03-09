@@ -29,7 +29,7 @@ class FieldSlot extends BetableSlot
     {
         //if there is bet on the slot
         if ($this->getBet() > 0) {
-            $diceTotal = $dice1 + $dice2;
+            $diceTotal = $dice1->getValue() + $dice2->getValue();
 
             if (in_array($diceTotal, static::$winningNumbers)) {
                 return true;
@@ -72,6 +72,7 @@ class FieldSlot extends BetableSlot
             if ($this->getValue() == 2 || $this->getValue() == 12) {
                 $winAmount = $winAmount * 2;
             }
+            return $winAmount;
         } else if ($this->isLoser($dice1, $dice2)) {
             
             return ($this->getBet() * -1);
