@@ -104,6 +104,11 @@ class CrapsGame
         static::$slots['8'] = new SoftSlot('8', '8', 116.67);
         static::$slots['9'] = new SoftSlot('9', '9', 140);
         static::$slots['10'] = new SoftSlot('10', '10', 180);
+
+        static::$slots['Hard4'] = new HardSlot('Hard4', '4', 600);
+        static::$slots['Hard6'] = new HardSlot('Hard6', '6', 800);
+        static::$slots['Hard8'] = new HardSlot('Hard8', '8', 800);
+        static::$slots['Hard10'] = new HardSlot('Hard10', '10', 600);
         
         static::$slots['field'] = new FieldSlot('field', 'field');
         static::$slots['pass'] = new PassSlot('pass', 'pass');
